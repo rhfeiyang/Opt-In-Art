@@ -9,8 +9,8 @@
 <a href="https://huggingface.co/datasets/rhfeiyang/Blank-Canvas-Dataset"><img src="https://img.shields.io/badge/Blank Canvas-Dataset-green"></a>
 <a href="https://github.com/rhfeiyang/Opt-In-Art/blob/main/LICENSE.txt"><img src="https://img.shields.io/badge/License-Apache--2.0-yellow"></a>
 
-![teaser](docs/Teaser.jpg)
-
+<!-- ![teaser](docs/Teaser.jpg) -->
+![poster](demo_img/poster_neurips.jpg)
 <br>
 <p align="center">
 
