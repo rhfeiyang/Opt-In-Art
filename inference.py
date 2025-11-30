@@ -486,7 +486,7 @@ def parse_args():
 
     # parser.add_argument("--vae_path", type=str, default="CompVis/stable-diffusion-v1-4", help="Path to the VAE model.")
     # parser.add_argument("--text_encoder_path", type=str, default="CompVis/stable-diffusion-v1-4", help="Path to the text encoder model.")
-    parser.add_argument("--pretrained_model_name_or_path", type=str, default="rhfeiyang/art-free-diffusion-v1", help="Path to the pretrained model.")
+    parser.add_argument("--pretrained_model_name_or_path", type=str, default="rhfeiyang/Blank-Canvas-Diffusion-v1", help="Path to the pretrained model.")
     parser.add_argument("--unet_ckpt", default=None, type=str, help="Path to the unet checkpoint")
     parser.add_argument("--guidance_scale", type=float, default=5.0, help="guidance scale")
     parser.add_argument("--infer_mode", default="sks_art",  help="inference mode") #, choices=["style", "ori", "artist", "sks_art","Peter"]

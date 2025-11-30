@@ -80,7 +80,7 @@ def parse_args():
     parser.add_argument(
         "--pretrained_model_name_or_path",
         type=str,
-        default="rhfeiyang/art-free-diffusion-v1",
+        default="rhfeiyang/Blank-Canvas-Diffusion-v1",
         # required=True,
         help="Path to pretrained model or model identifier from huggingface.co/models.",
     )
@@ -372,8 +372,8 @@ def parse_args():
             " more information see https://huggingface.co/docs/accelerate/v0.17.0/en/package_reference/accelerator#accelerate.Accelerator"
         ),
     )
-    parser.add_argument("--vae_path", type=str, default="rhfeiyang/art-free-diffusion-v1", help="Path to the VAE model.")
-    parser.add_argument("--text_encoder_path", type=str, default="rhfeiyang/art-free-diffusion-v1", help="Path to the text encoder model.")
+    parser.add_argument("--vae_path", type=str, default="rhfeiyang/Blank-Canvas-Diffusion-v1", help="Path to the VAE model.")
+    parser.add_argument("--text_encoder_path", type=str, default="rhfeiyang/Blank-Canvas-Diffusion-v1", help="Path to the text encoder model.")
     parser.add_argument("--p_uncond", type=float, default=0.1, help="The probability of unconditional diffusion.")
 
     args = parser.parse_args()

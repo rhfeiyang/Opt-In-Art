@@ -1,6 +1,6 @@
 #prompts_file: "./data/prompts.yaml"
 pretrained_model:
-  name_or_path: "rhfeiyang/art-free-diffusion" # you can also use .ckpt or .safetensors models
+  name_or_path: "rhfeiyang/Blank-Canvas-Diffusion-v1" # you can also use .ckpt or .safetensors models
   v2: false # true if model is v2.x
   v_pred: false # true if model uses v-prediction
 network:

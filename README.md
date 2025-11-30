@@ -1,10 +1,10 @@
 # Opt-In Art: Learning Art Styles Only from Few Examples
 <a href="https://joaanna.github.io/art-free-diffusion"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
-<a href="https://huggingface.co/spaces/rhfeiyang/Art-Free-Diffusion"><img src="https://img.shields.io/badge/Demo-HuggingFace-yellow"></a>
+<a href="https://huggingface.co/spaces/rhfeiyang/Opt-In-Art"><img src="https://img.shields.io/badge/Demo-HuggingFace-yellow"></a>
 <a href="https://arxiv.org/abs/2412.00176"><img src="https://img.shields.io/badge/arXiv-2412.00176-b31b1b.svg"></a>
-<a href="https://huggingface.co/rhfeiyang/art-free-diffusion-v1"><img src="https://img.shields.io/badge/Blank Canvas-Diffusion_v1-purple"></a>
-<a href="https://huggingface.co/datasets/rhfeiyang/Art-Free-SAM"><img src="https://img.shields.io/badge/Blank Canvas-Dataset-green"></a>
-<a href="https://github.com/rhfeiyang/art-free-diffusion/blob/main/LICENSE.txt"><img src="https://img.shields.io/badge/License-Apache--2.0-yellow"></a>
+<a href="https://huggingface.co/rhfeiyang/Blank-Canvas-Diffusion-v1"><img src="https://img.shields.io/badge/Blank Canvas-Diffusion_v1-purple"></a>
+<a href="https://huggingface.co/datasets/rhfeiyang/Blank-Canvas-Dataset"><img src="https://img.shields.io/badge/Blank Canvas-Dataset-green"></a>
+<a href="https://github.com/rhfeiyang/Opt-In-Art/blob/main/LICENSE.txt"><img src="https://img.shields.io/badge/License-Apache--2.0-yellow"></a>
 
 ![teaser](docs/Teaser.jpg)
 
@@ -28,10 +28,10 @@ We show that it is possible to adapt a model that is trained without paintings t
 Finally, using data attribution techniques, we analyze how both artistic and non-artistic datasets contribute to generating artistic-style images. Surprisingly, our findings suggest that high-quality artistic outputs can be achieved without prior exposure to artistic data, indicating that artistic style generation can occur in a controlled, opt-in manner using only a limited, carefully selected set of training examples.
 </p>
 
-# Huggingface Demo [![Open In Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/rhfeiyang/Art-Free-Diffusion)
+# Huggingface Demo [![Open In Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/rhfeiyang/Opt-In-Art)
 ![HF demo](demo_img/hf_demo.png)
 
-# Colab Demo [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rhfeiyang/art-free-diffusion/blob/master/demo.ipynb)
+# Colab Demo [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rhfeiyang/Opt-In-Art/blob/master/demo.ipynb)
 
 See `demo.ipynb` for a demo of our Blank Canvas Diffusion model and Art Adapter.
 
@@ -71,7 +71,7 @@ Then specify the dataset roots in `custom_datasets/mypath.py`(sam_images, sam_ca
 To Download our Blank Canvas Dataset ids:
 ``` shell
 cd data
-python download.py -d Art-Free-SAM
+python download.py -d Blank-Canvas-Dataset
 cd ..
 ```
 

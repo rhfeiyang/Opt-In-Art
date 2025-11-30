@@ -3,7 +3,7 @@
 export MODEL_NAME="CompVis/stable-diffusion-v1-4"
 export DATASET_NAME="whole_sam"
 export machine_rank=${1:-0}
-vae_path="rhfeiyang/art-free-diffusion-v1"
+vae_path="rhfeiyang/Blank-Canvas-Diffusion-v1"
 text_encoder_path="bert-base-uncased"
 resume_checkpoint="latest"
 resolution=512

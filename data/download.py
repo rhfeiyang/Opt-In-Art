@@ -14,17 +14,17 @@ name_map = {
 
 def download_data(data_list, save_root="./"):
     for data in data_list:
-        if data == "Art-Free-SAM":
-            repo_id = "rhfeiyang/Art-Free-SAM"
+        if data == "Blank-Canvas-Dataset":
+            repo_id = "rhfeiyang/Blank-Canvas-Dataset"
             # download all the files
-            snapshot_download(repo_id=repo_id,repo_type="dataset", local_dir=os.path.join(save_root,"Art-Free-SAM"))
+            snapshot_download(repo_id=repo_id,repo_type="dataset", local_dir=os.path.join(save_root,"Blank-Canvas-Dataset"))
 
         elif "csd" in data:
             repo_id = "tomg-group-umd/CSD-ViT-L"
             hf_hub_download(repo_id=repo_id,repo_type="model", filename="pytorch_model.bin", local_dir=os.path.join(save_root,"weights"))
             os.rename(os.path.join(save_root,"weights","pytorch_model.bin"), os.path.join(save_root,"weights","CSD-checkpoint.pth"))
         elif data == "laion_pop500":
-            repo_id = "rhfeiyang/art-free-diffusion_resources"
+            repo_id = "rhfeiyang/Opt-In-Art_resources"
             hf_hub_download(repo_id=repo_id,repo_type="dataset", subfolder="laion_pop500", local_dir=save_root, filename="laion_pop500_images.zip")
             hf_hub_download(repo_id=repo_id,repo_type="dataset", subfolder="laion_pop500", local_dir=save_root, filename="laion_pop500.csv")
             hf_hub_download(repo_id=repo_id,repo_type="dataset", subfolder="laion_pop500", local_dir=save_root, filename="laion_pop500_first_sentence.csv")
@@ -34,7 +34,7 @@ def download_data(data_list, save_root="./"):
             with zipfile.ZipFile(file_path, 'r') as zip_ref:
                 zip_ref.extractall(os.path.join(save_root,"laion_pop500"))
         else:
-            repo_id = "rhfeiyang/art-free-diffusion_resources"
+            repo_id = "rhfeiyang/Opt-In-Art_resources"
             name = name_map[data]
             hf_hub_download(repo_id=repo_id,repo_type="dataset", filename=name, local_dir=save_root)
             file_path=os.path.join(save_root,name)

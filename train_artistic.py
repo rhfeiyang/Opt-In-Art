@@ -448,7 +448,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--save_path", type=str, default = "lora_models", help="save path")
     parser.add_argument("--lr", type=float, required=False, default=2e-4)
-    parser.add_argument("--pretrained_model_name_or_path", type=str, default="rhfeiyang/art-free-diffusion-v1")
+    parser.add_argument("--pretrained_model_name_or_path", type=str, default="rhfeiyang/Blank-Canvas-Diffusion-v1")
     parser.add_argument("--resolution", type=int, default=512)
     parser.add_argument("--training_method", type=str, default="all_up", help="all_up ,full, noxattn, down_2_attn")
     parser.add_argument("--train_batch_size", type=int, default=5)
