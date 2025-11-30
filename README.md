@@ -1,4 +1,7 @@
 # Opt-In Art: Learning Art Styles Only from Few Examples
+
+🎉 **Accepted by NeurIPS 2025 Creative AI Track!** 🎊
+
 <a href="https://joaanna.github.io/art-free-diffusion"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
 <a href="https://huggingface.co/spaces/rhfeiyang/Opt-In-Art"><img src="https://img.shields.io/badge/Demo-HuggingFace-yellow"></a>
 <a href="https://arxiv.org/abs/2412.00176"><img src="https://img.shields.io/badge/arXiv-2412.00176-b31b1b.svg"></a>
