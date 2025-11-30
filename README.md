@@ -1,9 +1,9 @@
-# Art-Free Generative Models: Art Creation Without Graphic Art Knowledge
+# Opt-In Art: Learning Art Styles Only from Few Examples
 <a href="https://joaanna.github.io/art-free-diffusion"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
 <a href="https://huggingface.co/spaces/rhfeiyang/Art-Free-Diffusion"><img src="https://img.shields.io/badge/Demo-HuggingFace-yellow"></a>
 <a href="https://arxiv.org/abs/2412.00176"><img src="https://img.shields.io/badge/arXiv-2412.00176-b31b1b.svg"></a>
-<a href="https://huggingface.co/rhfeiyang/art-free-diffusion-v1"><img src="https://img.shields.io/badge/Art--Free-Diffusion_v1-purple"></a>
-<a href="https://huggingface.co/datasets/rhfeiyang/Art-Free-SAM"><img src="https://img.shields.io/badge/Art--Free-SAM-green"></a>
+<a href="https://huggingface.co/rhfeiyang/art-free-diffusion-v1"><img src="https://img.shields.io/badge/Blank Canvas-Diffusion_v1-purple"></a>
+<a href="https://huggingface.co/datasets/rhfeiyang/Art-Free-SAM"><img src="https://img.shields.io/badge/Blank Canvas-Dataset-green"></a>
 <a href="https://github.com/rhfeiyang/art-free-diffusion/blob/main/LICENSE.txt"><img src="https://img.shields.io/badge/License-Apache--2.0-yellow"></a>
 
 ![teaser](docs/Teaser.jpg)
@@ -11,18 +11,21 @@
 <br>
 <p align="center">
 
-> <a href="https://joaanna.github.io/art-free-diffusion">**Art-Free Generative Models: Art Creation Without Graphic Art Knowledge**</a>
+> <a href="https://joaanna.github.io/art-free-diffusion">**Opt-In Art: Learning Art Styles Only from Few Examples**</a>
 >
 <a href="https://rhfeiyang.github.io/" target="_blank">Hui Ren*</a>,
 <a href="https://joaanna.github.io/" target="_blank">Joanna Materzynska*</a>,
 <a href="https://rohitgandikota.github.io/" target="_blank">Rohit Gandikota</a>,
+<a href="https://giannisdaras.github.io/" target="_blank">Giannis Daras</a>,
 <a href="https://baulab.info/" target="_blank">David Bau</a>,
 <a href="https://groups.csail.mit.edu/vision/torralbalab/" target="_blank">Antonio Torralba</a>
 
 (* indicates equal contribution)
 
 
-> We explore the question: ``How much prior art knowledge is needed to create art?". To find out, we designed a text-to-image generation model that skips training on art-related content entirely. Then, we developed a straightforward method to create an "art adapter," which learns artistic styles using just a handful of examples. Our experiments reveal that the art generated this way is rated by users as on par with pieces from models trained on massive, art-heavy datasets. Finally, through data attribution techniques, we illustrate how examples from both artistic and non-artistic datasets contributed to the creation of new artistic styles.
+> We explore whether pre-training on datasets with paintings is necessary for a model to learn an artistic style with only a few examples. To investigate this, we train a text-to-image model exclusively on photographs, without access to any painting-related content. 
+We show that it is possible to adapt a model that is trained without paintings to an artistic style, given only few examples. User studies and automatic evaluations confirm that our model (post-adaptation) performs on par with state-of-the-art models trained on massive datasets that contain artistic content like paintings, drawings or illustrations.
+Finally, using data attribution techniques, we analyze how both artistic and non-artistic datasets contribute to generating artistic-style images. Surprisingly, our findings suggest that high-quality artistic outputs can be achieved without prior exposure to artistic data, indicating that artistic style generation can occur in a controlled, opt-in manner using only a limited, carefully selected set of training examples.
 </p>
 
 # Huggingface Demo [![Open In Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/rhfeiyang/Art-Free-Diffusion)
@@ -30,19 +33,19 @@
 
 # Colab Demo [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rhfeiyang/art-free-diffusion/blob/master/demo.ipynb)
 
-See `demo.ipynb` for a demo of our Art-Free Diffusion model and Art Adapter.
+See `demo.ipynb` for a demo of our Blank Canvas Diffusion model and Art Adapter.
 
 # Setup
 To set up your python environment:
 ``` shell
-git clone https://github.com/rhfeiyang/art-free-diffusion.git
-cd art-free-diffusion
+git clone git@github.com:rhfeiyang/Opt-In-Art.git
+cd Opt-In-Art
 conda env create -n diffusion -f environment.yml
 conda activate diffusion
 ```
 
 # Data preparation
-## Art-free SAM
+## Blank Canvas Dataset
 Download original SA-1B dataset from [here](https://ai.meta.com/datasets/segment-anything-downloads/) and extract by keeping the split folder structure. Download caption dataset(SAM-LLaVA-Captions10M) from [here](https://huggingface.co/datasets/PixArt-alpha/SAM-LLaVA-Captions10M/tree/main) and extract. The folder structure should be like:
 ```
 sam_dataset
@@ -65,7 +68,7 @@ sam_dataset
 ```
 Then specify the dataset roots in `custom_datasets/mypath.py`(sam_images, sam_captions).
 
-To Download our Art-Free SAM ids:
+To Download our Blank Canvas Dataset ids:
 ``` shell
 cd data
 python download.py -d Art-Free-SAM
@@ -209,13 +212,13 @@ python inference.py --lora_weights <lora_location> --start_noise 800 --val_set l
 ## Citation
 If you find this useful for your research, please cite the following:
 ```bibtex
-@misc{ren2024art-free,
-    title={Art-Free Generative Models: Art Creation Without Graphic Art Knowledge},
-    author={Hui Ren and Joanna Materzynska and Rohit Gandikota and David Bau and Antonio Torralba},
-    year={2024},
-    eprint={2412.00176},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2412.00176},
+@misc{ren2025optinartlearningart,
+        title={Opt-In Art: Learning Art Styles Only from Few Examples}, 
+        author={Hui Ren and Joanna Materzynska and Rohit Gandikota and David Bau and Antonio Torralba},
+        year={2025},
+        eprint={2412.00176},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2412.00176}, 
 }
 ```
